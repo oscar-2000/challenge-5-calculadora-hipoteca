@@ -1,0 +1,63 @@
+@import "tailwindcss";
+
+#root {
+  --celeste: #e3f4fc;
+  --verde: #cdd842;
+  --azul: #133040;
+  --naranjo: #d63428;
+}
+
+body {
+  box-sizing: border-box;
+}
+
+p,h1,h2,h3,h4,h5 {
+  display: block;
+}
+.bg-celeste {
+  background-color: var(--celeste);
+}
+
+.bg-verde {
+  background-color: var(--verde);
+}
+
+.bg-azul {
+  background-color: var(--azul);
+}
+
+.bg-naranjo {
+  background-color: var(--naranjo);
+}
+
+.texto-naranjo {
+  color: var(--naranjo);
+}
+
+.texto-celeste {
+  color: var(--celeste);
+}
+
+.texto-verde {
+  color: var(--verde);
+}
+
+.texto-azul {
+  color: var(--azul);
+}
+
+.borde-celeste {
+  border-color: var(--celeste);
+}
+
+.borde-verde {
+  border-color: var(--verde);
+}
+
+.borde-azul {
+  border-color: var(--azul);
+}
+
+.borde-naranjo {
+  border-color: var(--naranjo);
+}
