@@ -7,6 +7,7 @@ export default function Formulario() {
     const {datos, setAmount, setYear,setRate, setType, resetForm, showResult, clickConfirm, formCompleted} = useContext(DatosContext)
     return(
         <>
+        <form onSubmit={(e) => {e.preventDefault(),showResult()}}>
             <div className="flex flex-row gap-3 items-end justify-between flex-wrap mb-10">
                 <h1 className="text-2xl texto-azul font-bold">Mortgage calculator</h1>
                 <button onClick={() => resetForm()} className="cursor-pointer duration-300 hover:text-[#cdd842] text-md text-gray-600 font-semibold underline underline-offset-4">Clear all</button>
@@ -201,12 +202,13 @@ export default function Formulario() {
                 </div>
 
                 <div className="flex justify-start">
-                    <button onClick={() => showResult()} className="bg-[#cdd842] duration-300 hover:bg-[#b9c065] py-4 px-5 lg:px-10 w-full lg:w-auto font-semibold text-md lg:text-xl rounded-full flex flex-row items-center justify-center gap-2 lg:gap-4 cursor-pointer">
+                    <button type="submit" className="bg-[#cdd842] duration-300 hover:bg-[#b9c065] py-4 px-5 lg:px-10 w-full lg:w-auto font-semibold text-md lg:text-xl rounded-full flex flex-row items-center justify-center gap-2 lg:gap-4 cursor-pointer">
                         <img src="/img/icon-calculator.svg" className="h-5 w-5" alt="Calcular" />
                         Calculate Repayments
                     </button>
                 </div>
             </div>
+        </form>
         </>
     )
 }
