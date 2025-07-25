@@ -9,12 +9,12 @@ export default function Formulario() {
         <>
         <form onSubmit={(e) => {e.preventDefault(),showResult()}}>
             <div className="flex flex-row gap-3 items-end justify-between flex-wrap mb-10">
-                <h1 className="text-2xl texto-azul font-bold">Mortgage calculator</h1>
+                <h1 className="text-2xl texto-azul font-bold capitalize">Mortgage calculator</h1>
                 <button onClick={() => resetForm()} className="cursor-pointer duration-300 hover:text-[#cdd842] text-md text-gray-600 font-semibold underline underline-offset-4">Clear all</button>
             </div>
             <div className="flex flex-col gap-y-7">
                 <div className="flex flex-col gap-y-2">
-                    <p className="text-lg font-semibold text-gray-600">Mortgage amount</p>
+                    <p className="text-lg font-semibold text-gray-600 capitalize">Mortgage amount</p>
                     <div className="group">
                         <div className={`${clickConfirm && datos.amount <= 0 ? 'bg-naranjo borde-naranjo' : 'border-gray-300 group-hover:bg-[#cdd842] group-hover:border-[#cdd842] group-hover:text-[#133040]'} flex flex-row border-[2px] rounded-lg duration-300`}>
                             <span className={`${clickConfirm && datos.amount <= 0 ? 'bg-naranjo text-white' : 'bg-[#e3f4fc] text-gray-600'}  py-2 px-4 rounded-es-lg rounded-tl-lg text-2xl group-hover:bg-[#cdd842] duration-300`}>&#8364;</span>
@@ -149,7 +149,7 @@ export default function Formulario() {
                 </div>
 
                 <div className="flex flex-col gap-y-2">
-                    <p className="text-lg font-semibold text-gray-600">Mortgage type</p>
+                    <p className="text-lg font-semibold text-gray-600 capitalize">Mortgage type</p>
                     <div className="flex flex-col gap-y-2">
                         <div onClick={() => setType(1)} className={`${datos.type === 1 ? 'bg-[#cdd842]/20 border-[#cdd842]' : 'border-gray-300 hover:bg-[#cdd842]'} flex flex-row items-center gap-3 duration-300 border-[2px] rounded-lg py-3 px-4 cursor-pointer`}>
                             <ConfigProvider
